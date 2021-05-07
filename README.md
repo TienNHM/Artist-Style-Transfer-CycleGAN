@@ -20,6 +20,10 @@ datasets
 ```
 
 ## Results
+### Input
+![](./images/meow.jpg)
+
+### Output
 ![](./out/output.png)
 
 ## References
