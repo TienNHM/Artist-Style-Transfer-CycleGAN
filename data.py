@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-
-__author__ = "Rahul Bhalley"
-
 from config import *
 
 from torch.utils.data import DataLoader

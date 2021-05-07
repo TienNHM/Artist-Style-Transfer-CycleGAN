@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-
-__author__ = "Rahul Bhalley"
-
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -32,13 +28,15 @@ try:
         # Sample directories
         if not os.path.exists(SAMPLE_DIR):
             os.mkdir(SAMPLE_DIR)
-        
+
         for style in STYLES:
             if not os.path.exists(os.path.join(SAMPLE_DIR, style)):
                 os.mkdir(os.path.join(SAMPLE_DIR, style))
                 # Make three directories
-                os.mkdir(os.path.join(SAMPLE_DIR, style, OUT_STY_DIR))  # Stylized images here
-                os.mkdir(os.path.join(SAMPLE_DIR, style, OUT_REC_DIR))  # Reconstructed images here
+                # Stylized images here
+                os.mkdir(os.path.join(SAMPLE_DIR, style, OUT_STY_DIR))
+                # Reconstructed images here
+                os.mkdir(os.path.join(SAMPLE_DIR, style, OUT_REC_DIR))
 except:
     print("Directories already exist!")
 
@@ -50,7 +48,7 @@ except:
 if TRAIN:
     # Make experiments reproducible
     _ = torch.manual_seed(RANDOM_SEED)
-    
+
     # Load the datasets
     X_set, Y_set = load_data()
 
@@ -69,8 +67,8 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 # Networks
 C_X = Critic().to(device)   # Criticizes X data
 C_Y = Critic().to(device)   # Criticizes Y data
-G = Generator(upsample=UPSAMPLE).to(device) # Translates X -> Y
-F = Generator(upsample=UPSAMPLE).to(device) # Translates Y -> X
+G = Generator(upsample=UPSAMPLE).to(device)  # Translates X -> Y
+F = Generator(upsample=UPSAMPLE).to(device)  # Translates Y -> X
 
 # Losses
 l1_loss = nn.L1Loss()
@@ -78,8 +76,8 @@ l1_loss = nn.L1Loss()
 # Optimizers
 C_X_optim = optim.Adam(C_X.parameters(), lr=LR, betas=(BETA1, BETA2))
 C_Y_optim = optim.Adam(C_Y.parameters(), lr=LR, betas=(BETA1, BETA2))
-G_optim =   optim.Adam(G.parameters(),   lr=LR, betas=(BETA1, BETA2))
-F_optim =   optim.Adam(F.parameters(),   lr=LR, betas=(BETA1, BETA2))
+G_optim = optim.Adam(G.parameters(),   lr=LR, betas=(BETA1, BETA2))
+F_optim = optim.Adam(F.parameters(),   lr=LR, betas=(BETA1, BETA2))
 
 
 ###############
@@ -94,26 +92,32 @@ def train():
     # Load the checkpoints from `BEGIN_ITER`
     try:
         # Get checkpoint paths
-        g_model_path =   os.path.join(CKPT_DIR, TRAIN_STYLE, f"G_{BEGIN_ITER}.pth")
-        f_model_path =   os.path.join(CKPT_DIR, TRAIN_STYLE, f"F_{BEGIN_ITER}.pth")
-        c_x_model_path = os.path.join(CKPT_DIR, TRAIN_STYLE, f"C_X_{BEGIN_ITER}.pth")
-        c_y_model_path = os.path.join(CKPT_DIR, TRAIN_STYLE, f"C_Y_{BEGIN_ITER}.pth")
+        g_model_path = os.path.join(
+            CKPT_DIR, TRAIN_STYLE, f"G_{BEGIN_ITER}.pth")
+        f_model_path = os.path.join(
+            CKPT_DIR, TRAIN_STYLE, f"F_{BEGIN_ITER}.pth")
+        c_x_model_path = os.path.join(
+            CKPT_DIR, TRAIN_STYLE, f"C_X_{BEGIN_ITER}.pth")
+        c_y_model_path = os.path.join(
+            CKPT_DIR, TRAIN_STYLE, f"C_Y_{BEGIN_ITER}.pth")
 
         # Load parameters from checkpoint paths
         G.load_state_dict(torch.load(g_model_path,     map_location=device))
         F.load_state_dict(torch.load(f_model_path,     map_location=device))
         C_X.load_state_dict(torch.load(c_x_model_path, map_location=device))
         C_Y.load_state_dict(torch.load(c_y_model_path, map_location=device))
-        
+
         # Status
-        print(f"Training: Loaded the checkpoints from {BEGIN_ITER}th iteration.")
+        print(
+            f"Training: Loaded the checkpoints from {BEGIN_ITER}th iteration.")
     except:
         # Status
-        print(f"Training: Couldn't load the checkpoints from {BEGIN_ITER}th iteration.")
+        print(
+            f"Training: Couldn't load the checkpoints from {BEGIN_ITER}th iteration.")
 
     # Now finally begin training!
     for i in range(BEGIN_ITER, END_ITER + 1):
-        
+
         # Sample safely
         x, y = safe_sampling(X_data, Y_data, device)
 
@@ -236,7 +240,7 @@ def train():
             # ∙ Cycle-consistency loss,             || G(F(y)) - y || L1
             # ∙ Identity loss,                      || G(x) - y || L1
             # ∙ Identity loss,                      || F(y) - x || L1
-            
+
             # QP-div losses
             x_loss = C_X_x - C_X_F_y        # real score - fake score
             y_loss = C_y_y - C_Y_G_x        # real score - fake score
@@ -248,7 +252,7 @@ def train():
             y_cyc_loss = l1_loss(G_F_y, y)  # || G(F(y)) - y || L1
             x_cyc_loss = x_cyc_loss.mean()
             y_cyc_loss = y_cyc_loss.mean()
-            
+
             # Identity losses
             x_id_loss = l1_loss(G_x, y)     # || G(x) - y || L1
             y_id_loss = l1_loss(F_y, x)     # || F(y) - x || L1
@@ -277,10 +281,12 @@ def train():
 
         if i % ITERS_PER_CKPT == 0:
             # Get checkpoint paths
-            g_model_path =   os.path.join(CKPT_DIR, TRAIN_STYLE, f"G_{i}.pth")
-            f_model_path =   os.path.join(CKPT_DIR, TRAIN_STYLE, f"F_{i}.pth")
-            c_x_model_path = os.path.join(CKPT_DIR, TRAIN_STYLE, f"C_X_{i}.pth")
-            c_y_model_path = os.path.join(CKPT_DIR, TRAIN_STYLE, f"C_Y_{i}.pth")
+            g_model_path = os.path.join(CKPT_DIR, TRAIN_STYLE, f"G_{i}.pth")
+            f_model_path = os.path.join(CKPT_DIR, TRAIN_STYLE, f"F_{i}.pth")
+            c_x_model_path = os.path.join(
+                CKPT_DIR, TRAIN_STYLE, f"C_X_{i}.pth")
+            c_y_model_path = os.path.join(
+                CKPT_DIR, TRAIN_STYLE, f"C_Y_{i}.pth")
 
             # Save the checkpoints
             torch.save(G.state_dict(),   g_model_path)
@@ -299,7 +305,7 @@ def train():
 ################
 
 def infer(iteration, style, img_name, in_img_dir, out_rec_dir, out_sty_dir, img_size=None):
-    
+
     # Set neural nets to evaluation mode
     G.eval()
     F.eval()
@@ -309,16 +315,18 @@ def infer(iteration, style, img_name, in_img_dir, out_rec_dir, out_sty_dir, img_
         # Get checkpoint paths
         g_model_path = os.path.join(CKPT_DIR, style, f"G_{iteration}.pth")
         f_model_path = os.path.join(CKPT_DIR, style, f"F_{iteration}.pth")
-        
+
         # Load parameters from checkpoint paths
         G.load_state_dict(torch.load(g_model_path, map_location=device))
         F.load_state_dict(torch.load(f_model_path, map_location=device))
-        
+
         # Status
-        print(f"Inference: Loaded the checkpoints from {iteration}th iteration.")
+        print(
+            f"Inference: Loaded the checkpoints from {iteration}th iteration.")
     except:
         # Status
-        print(f"Inference: Couldn't load the checkpoints from {iteration}th iteration.")
+        print(
+            f"Inference: Couldn't load the checkpoints from {iteration}th iteration.")
         raise
 
     # Minor transforms
@@ -341,17 +349,17 @@ def infer(iteration, style, img_name, in_img_dir, out_rec_dir, out_sty_dir, img_
         image = Image.open(image_name)
         image = loader(image).unsqueeze(0)  # Add a fake batch dimension
         return image.to(device, torch.float)
-    
+
     # style_a = image_loader(out_img_path)
     in_img_path = os.path.join(in_img_dir, img_name)
     in_img = image_loader(in_img_path)
-    
+
     with torch.no_grad():
         print("Stylization")
         sty_img = F(in_img)     # Y -> X
         print("Reconstruction")
         rec_img = G(sty_img)    # X -> Y
-    
+
     # WARNING: Please do not change this code snippet with a closed mind. 🤪👻
     iteration = int(iteration / 1000)
     only_img_name = img_name.split('.')[0]
@@ -360,22 +368,22 @@ def infer(iteration, style, img_name, in_img_dir, out_rec_dir, out_sty_dir, img_
     # Set up names
     out_sty_name = f"sty_{only_img_name}_{style}_{iteration}k.{img_type}"
     out_rec_name = f"rec_{only_img_name}_{style}_{iteration}k.{img_type}"
-    
+
     # Set up paths
     sty_path = os.path.join(SAMPLE_DIR, style, out_sty_dir, out_sty_name)
     rec_path = os.path.join(SAMPLE_DIR, style, out_rec_dir, out_rec_name)
-    
+
     # Save image grids
     vutils.save_image(sty_img, sty_path, normalize=True)
     vutils.save_image(rec_img, rec_path, normalize=True)
-    
+
     # Status
     print(f"Saved {rec_path}")
     print(f"Saved {sty_path}")
 
 
 if __name__ == "__main__":
-    
+
     if TRAIN:
         train()
     else:

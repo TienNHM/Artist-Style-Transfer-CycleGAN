@@ -1,4 +1,4 @@
-# Artist Style Transfer Via Quadratic Potential
+# Artist Style Transfer CycleGAN
 
 [**Rahul Bhalley**](https://github.com/rahulbhalley) and [Jianlin Su](https://github.com/bojone)
 

@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-
-__author__ = "Rahul Bhalley"
-
 # Data
 DATASET_DIR = "datasets"
 DATASET_NAME = "vangogh2photo"
