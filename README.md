@@ -20,6 +20,7 @@
 ## Project Structure
 <details>
 <summary>Mở rộng</summary>
+
 ```
 ├───assets
 ├───checkpoints
@@ -59,6 +60,7 @@
 ├───images
 └───out
 ```
+
 </details>
 
 ## Datasets
