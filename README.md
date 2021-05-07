@@ -11,13 +11,11 @@
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/TienNHM/Artist-Style-Transfer-CycleGAN)](https://github.com/TienNHM/Artist-Style-Transfer-CycleGAN/releases)
 
 ## Ngôn ngữ lập trình
-<img src="https://img.icons8.com/color/48/000000/python.png"/>
-<img src="https://img.icons8.com/doodle/48/000000/console--v2.png"/>
+![](https://img.icons8.com/color/48/000000/python.png)
+![](https://img.icons8.com/doodle/48/000000/console--v2.png)
 
 ## Công nghệ sử dụng
-<img src="https://pytorch.org/docs/stable/_static/images/logo-icon.svg" width="30px">
-
-<img src="https://colab.research.google.com/img/colab_favicon_256px.png" width="48px">
+<img src="https://pytorch.org/docs/stable/_static/images/logo-icon.svg" width="30px"> <img src="https://colab.research.google.com/img/colab_favicon_256px.png" width="48px">
 
 ## Project Structure
 <details>
