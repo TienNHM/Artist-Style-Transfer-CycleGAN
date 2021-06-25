@@ -83,11 +83,164 @@ datasets
 ```
 
 ## Results
-### Input
-![](./images/meow.jpg)
+### Loss chart
+![Biểu đồ Loss của model trong quá trình train 5000 epoches](./report/loss.png)
 
-### Output
-![](./out/output.png)
+### Test
+
+#### Test với pre-train
+Với mỗi style ảnh (Cezanne, Monet, Ukio-e, Van Gogh), nhóm đem test với 4 ảnh và thu được kết quả như sau:
+
+![](./report/test_pretrain.png)
+
+#### Test với model tự custom
+
+<h4 align="center"><em>Danh sách các ảnh Input</em></h4>
+<div align="center">
+  <span>
+    <img alt="Ảnh test 1" title="Ảnh test 1" src="./report/test1.jpg" height="175px" />
+  </span>
+  <span>
+    <img alt="Ảnh test 2" title="Ảnh test 2" src="./report/test2.jpg" height="175px" />
+  </span>
+</div>
+
+<div align="center">
+  <span>
+    <img alt="Ảnh test 3" title="Ảnh test 3" src="./report/test3.jpg" height="175px" />
+  </span>
+  <span>
+    <img alt="Ảnh test 4" title="Ảnh test 4" src="./report/test4.jpg" height="175px" />
+  </span>
+</div>
+
+Cứ 50 epoches trong tổng số 5000 epoches, nhóm sẽ lấy ra 1 checkpoint để test. Thu được kết quả như sau:
+
+- Kết quả Test với ảnh Test 1 ứng với các epoch 0 – 5000 (step: 50):
+![](./report/test1.gif)
+
+<div align="center">
+  <span>
+    <img src="./report/test1/test1.1.jpg" height="175px" />
+  </span>
+  <span>
+    <img src="./report/test1/test1.2.jpg" height="175px" />
+  </span>
+  <span>
+    <img src="./report/test1/test1.3.jpg" height="175px" />
+  </span>
+</div>
+<div align="center">
+  <span>
+    <img src="./report/test1/test1.4.jpg" height="175px" />
+  </span>
+  <span>
+    <img src="./report/test1/test1.5.jpg" height="175px" />
+  </span>
+  <span>
+    <img src="./report/test1/test1.6.jpg" height="175px" />
+  </span>
+</div>
+
+- Kết quả Test với ảnh Test 2 ứng với các epoch 0 – 5000 (step: 50):
+![](./report/test2.gif)
+
+<div align="center">
+  <span>
+    <img src="./report/test2/test2.1.jpg" height="175px" />
+  </span>
+  <span>
+    <img src="./report/test2/test2.2.jpg" height="175px" />
+  </span>
+  <span>
+    <img src="./report/test2/test2.3.jpg" height="175px" />
+  </span>
+</div>
+<div align="center">
+  <span>
+    <img src="./report/test2/test2.4.jpg" height="175px" />
+  </span>
+  <span>
+    <img src="./report/test2/test2.5.jpg" height="175px" />
+  </span>
+  <span>
+    <img src="./report/test2/test2.6.jpg" height="175px" />
+  </span>
+</div>
+
+- Kết quả Test với ảnh Test 3 ứng với các epoch 3000 – 4000 (step: 10):
+![](./report/test3.gif)
+
+<div align="center">
+  <span>
+    <img src="./report/test3/test3.1.jpg" height="175px" />
+  </span>
+  <span>
+    <img src="./report/test3/test3.2.jpg" height="175px" />
+  </span>
+  <span>
+    <img src="./report/test3/test3.3.jpg" height="175px" />
+  </span>
+</div>
+<div align="center">
+  <span>
+    <img src="./report/test3/test3.4.jpg" height="175px" />
+  </span>
+  <span>
+    <img src="./report/test3/test3.5.jpg" height="175px" />
+  </span>
+  <span>
+    <img src="./report/test3/test3.6.jpg" height="175px" />
+  </span>
+</div>
+<div align="center">
+  <span>
+    <img src="./report/test3/test3.7.jpg" height="175px" />
+  </span>
+  <span>
+    <img src="./report/test3/test3.8.jpg" height="175px" />
+  </span>
+  <span>
+    <img src="./report/test3/test3.9.jpg" height="175px" />
+  </span>
+</div>
+
+- Kết quả Test với ảnh Test 4 ứng với các epoch 3000 – 4000 (step: 10):
+![](./report/test4.gif)
+
+<div align="center">
+  <span>
+    <img src="./report/test4/test4.1.jpg" height="175px" />
+  </span>
+  <span>
+    <img src="./report/test4/test4.2.jpg" height="175px" />
+  </span>
+  <span>
+    <img src="./report/test4/test4.3.jpg" height="175px" />
+  </span>
+</div>
+<div align="center">
+  <span>
+    <img src="./report/test4/test4.4.jpg" height="175px" />
+  </span>
+  <span>
+    <img src="./report/test4/test4.5.jpg" height="175px" />
+  </span>
+  <span>
+    <img src="./report/test4/test4.6.jpg" height="175px" />
+  </span>
+</div>
+<div align="center">
+  <span>
+    <img src="./report/test4/test4.7.jpg" height="175px" />
+  </span>
+  <span>
+    <img src="./report/test4/test4.8.jpg" height="175px" />
+  </span>
+  <span>
+    <img src="./report/test4/test4.9.jpg" height="175px" />
+  </span>
+</div>
 
 ## References
 - [**Rahul Bhalley**](https://github.com/rahulbhalley) and [Jianlin Su](https://github.com/bojone)
