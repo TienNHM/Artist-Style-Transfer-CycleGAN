@@ -84,14 +84,17 @@ datasets
 
 ## Results
 ### Loss chart
-![Biểu đồ Loss của model trong quá trình train 5000 epoches](./report/loss.png)
+<p align="center">Biểu đồ Loss của model trong quá trình train 5000 epoches
+    <img src="./report/loss.png"/>
+</p>
 
 ### Test
-
 #### Test với pre-train
 Với mỗi style ảnh (Cezanne, Monet, Ukio-e, Van Gogh), nhóm đem test với 4 ảnh và thu được kết quả như sau:
 
-![](./report/test_pretrain.png)
+<p align="center">
+    <img src="./report/test_pretrain.png">
+</p>
 
 #### Test với model tự custom
 
@@ -125,24 +128,24 @@ Cứ 50 epoches trong tổng số 5000 epoches, nhóm sẽ lấy ra 1 checkpoint
 <br>
 <div align="center">
   <span>
-    <img src="./report/test1/test1.1.jpg" width="175px" />
+    <img src="./report/test1/test1.1.jpg" width="200px" />
   </span>
   <span>
-    <img src="./report/test1/test1.2.jpg" width="175px" />
+    <img src="./report/test1/test1.2.jpg" width="200px" />
   </span>
   <span>
-    <img src="./report/test1/test1.3.jpg" width="175px" />
+    <img src="./report/test1/test1.3.jpg" width="200px" />
   </span>
 </div>
 <div align="center">
   <span>
-    <img src="./report/test1/test1.4.jpg" width="175px" />
+    <img src="./report/test1/test1.4.jpg" width="200px" />
   </span>
   <span>
-    <img src="./report/test1/test1.5.jpg" width="175px" />
+    <img src="./report/test1/test1.5.jpg" width="200px" />
   </span>
   <span>
-    <img src="./report/test1/test1.6.jpg" width="175px" />
+    <img src="./report/test1/test1.6.jpg" width="200px" />
   </span>
 </div>
 <br>
@@ -155,24 +158,24 @@ Cứ 50 epoches trong tổng số 5000 epoches, nhóm sẽ lấy ra 1 checkpoint
 <br>
 <div align="center">
   <span>
-    <img src="./report/test2/test2.1.jpg" width="175px" />
+    <img src="./report/test2/test2.1.jpg" width="200px" />
   </span>
   <span>
-    <img src="./report/test2/test2.2.jpg" width="175px" />
+    <img src="./report/test2/test2.2.jpg" width="200px" />
   </span>
   <span>
-    <img src="./report/test2/test2.3.jpg" width="175px" />
+    <img src="./report/test2/test2.3.jpg" width="200px" />
   </span>
 </div>
 <div align="center">
   <span>
-    <img src="./report/test2/test2.4.jpg" width="175px" />
+    <img src="./report/test2/test2.4.jpg" width="200px" />
   </span>
   <span>
-    <img src="./report/test2/test2.5.jpg" width="175px" />
+    <img src="./report/test2/test2.5.jpg" width="200px" />
   </span>
   <span>
-    <img src="./report/test2/test2.6.jpg" width="175px" />
+    <img src="./report/test2/test2.6.jpg" width="200px" />
   </span>
 </div>
 <br>
@@ -185,35 +188,35 @@ Cứ 50 epoches trong tổng số 5000 epoches, nhóm sẽ lấy ra 1 checkpoint
 <br>
 <div align="center">
   <span>
-    <img src="./report/test3/test3.1.jpg" width="175px" />
+    <img src="./report/test3/test3.1.jpg" width="200px" />
   </span>
   <span>
-    <img src="./report/test3/test3.2.jpg" width="175px" />
+    <img src="./report/test3/test3.2.jpg" width="200px" />
   </span>
   <span>
-    <img src="./report/test3/test3.3.jpg" width="175px" />
-  </span>
-</div>
-<div align="center">
-  <span>
-    <img src="./report/test3/test3.4.jpg" width="175px" />
-  </span>
-  <span>
-    <img src="./report/test3/test3.5.jpg" width="175px" />
-  </span>
-  <span>
-    <img src="./report/test3/test3.6.jpg" width="175px" />
+    <img src="./report/test3/test3.3.jpg" width="200px" />
   </span>
 </div>
 <div align="center">
   <span>
-    <img src="./report/test3/test3.7.jpg" width="175px" />
+    <img src="./report/test3/test3.4.jpg" width="200px" />
   </span>
   <span>
-    <img src="./report/test3/test3.8.jpg" width="175px" />
+    <img src="./report/test3/test3.5.jpg" width="200px" />
   </span>
   <span>
-    <img src="./report/test3/test3.9.jpg" width="175px" />
+    <img src="./report/test3/test3.6.jpg" width="200px" />
+  </span>
+</div>
+<div align="center">
+  <span>
+    <img src="./report/test3/test3.7.jpg" width="200px" />
+  </span>
+  <span>
+    <img src="./report/test3/test3.8.jpg" width="200px" />
+  </span>
+  <span>
+    <img src="./report/test3/test3.9.jpg" width="200px" />
   </span>
 </div>
 <br>
@@ -226,38 +229,41 @@ Cứ 50 epoches trong tổng số 5000 epoches, nhóm sẽ lấy ra 1 checkpoint
 <br>
 <div align="center">
   <span>
-    <img src="./report/test4/test4.1.jpg" width="175px" />
+    <img src="./report/test4/test4.1.jpg" width="200px" />
   </span>
   <span>
-    <img src="./report/test4/test4.2.jpg" width="175px" />
+    <img src="./report/test4/test4.2.jpg" width="200px" />
   </span>
   <span>
-    <img src="./report/test4/test4.3.jpg" width="175px" />
-  </span>
-</div>
-<div align="center">
-  <span>
-    <img src="./report/test4/test4.4.jpg" width="175px" />
-  </span>
-  <span>
-    <img src="./report/test4/test4.5.jpg" width="175px" />
-  </span>
-  <span>
-    <img src="./report/test4/test4.6.jpg" width="175px" />
+    <img src="./report/test4/test4.3.jpg" width="200px" />
   </span>
 </div>
 <div align="center">
   <span>
-    <img src="./report/test4/test4.7.jpg" width="175px" />
+    <img src="./report/test4/test4.4.jpg" width="200px" />
   </span>
   <span>
-    <img src="./report/test4/test4.8.jpg" width="175px" />
+    <img src="./report/test4/test4.5.jpg" width="200px" />
   </span>
   <span>
-    <img src="./report/test4/test4.9.jpg" width="175px" />
+    <img src="./report/test4/test4.6.jpg" width="200px" />
+  </span>
+</div>
+<div align="center">
+  <span>
+    <img src="./report/test4/test4.7.jpg" width="200px" />
+  </span>
+  <span>
+    <img src="./report/test4/test4.8.jpg" width="200px" />
+  </span>
+  <span>
+    <img src="./report/test4/test4.9.jpg" width="200px" />
   </span>
 </div>
 <br>
+
+## Report
+Xem report tại: [Report](./report/report.pdf) - password: `hcmute`
 
 ## References
 - [**Rahul Bhalley**](https://github.com/rahulbhalley) and [Jianlin Su](https://github.com/bojone)
