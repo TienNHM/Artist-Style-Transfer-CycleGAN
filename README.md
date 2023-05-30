@@ -1,3 +1,7 @@
+<p align="center">
+    <img src="./report/test_pretrain.png">
+</p>
+
 # Artist Style Transfer CycleGAN
 
 [![GitHub contributors](https://img.shields.io/github/contributors/TienNHM/Artist-Style-Transfer-CycleGAN)](https://github.com/TienNHM/Artist-Style-Transfer-CycleGAN/graphs/contributors)
