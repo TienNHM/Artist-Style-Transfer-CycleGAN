@@ -9,7 +9,6 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/TienNHM/Artist-Style-Transfer-CycleGAN?color=cyan)
 ![GitHub repo size](https://img.shields.io/github/repo-size/TienNHM/Artist-Style-Transfer-CycleGAN)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/TienNHM/Artist-Style-Transfer-CycleGAN)
-![Github total lines](https://sloc.xyz/github/TienNHM/Artist-Style-Transfer-CycleGAN)
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/TienNHM/Artist-Style-Transfer-CycleGAN?color=g)](https://github.com/TienNHM/Artist-Style-Transfer-CycleGAN/graphs/code-frequency)
 ![GitHub last commit](https://img.shields.io/github/last-commit/TienNHM/Artist-Style-Transfer-CycleGAN?color=yellow)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/TienNHM/Artist-Style-Transfer-CycleGAN)](https://github.com/TienNHM/Artist-Style-Transfer-CycleGAN/releases)
