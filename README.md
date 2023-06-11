@@ -89,7 +89,7 @@ datasets
 ## Results
 ### Loss chart
 <p align="center">Biểu đồ Loss của model trong quá trình train 5000 epoches
-    <img src="./report/loss.png"/>
+    <img src="./report/loss.png" loading="lazy" decoding="async"/>
 </p>
 
 ### Test
@@ -97,7 +97,7 @@ datasets
 Với mỗi style ảnh (Cezanne, Monet, Ukio-e, Van Gogh), nhóm đem test với 4 ảnh và thu được kết quả như sau:
 
 <p align="center">
-    <img src="./report/test_pretrain.png">
+    <img src="./report/test_pretrain.png" loading="lazy" decoding="async"/>
 </p>
 
 #### Test với model tự custom
@@ -105,18 +105,18 @@ Với mỗi style ảnh (Cezanne, Monet, Ukio-e, Van Gogh), nhóm đem test vớ
 <h4 align="center"><em>Danh sách các ảnh Input</em></h4>
 <div align="center">
   <span>
-    <img alt="Ảnh test 1" title="Ảnh test 1" src="./report/test1.jpg" width="300px" />
+    <img alt="Ảnh test 1" title="Ảnh test 1" src="./report/test1.jpg" width="300px" loading="lazy" decoding="async"/>
   </span>
   <span>
-    <img alt="Ảnh test 2" title="Ảnh test 2" src="./report/test2.jpg" width="300px" />
+    <img alt="Ảnh test 2" title="Ảnh test 2" src="./report/test2.jpg" width="300px" loading="lazy" decoding="async"/>
   </span>
 </div>
 <div align="center">
   <span>
-    <img alt="Ảnh test 3" title="Ảnh test 3" src="./report/test3.jpg" width="300px" />
+    <img alt="Ảnh test 3" title="Ảnh test 3" src="./report/test3.jpg" width="300px" loading="lazy" decoding="async"/>
   </span>
   <span>
-    <img alt="Ảnh test 4" title="Ảnh test 4" src="./report/test4.jpg" width="300px" />
+    <img alt="Ảnh test 4" title="Ảnh test 4" src="./report/test4.jpg" width="300px" loading="lazy" decoding="async"/>
   </span>
 </div>
 <br>
@@ -127,29 +127,29 @@ Cứ 50 epoches trong tổng số 5000 epoches, nhóm sẽ lấy ra 1 checkpoint
 - Kết quả Test với ảnh Test 1 ứng với các epoch 0 – 5000 (step: 50):
 
 <div align="center">
-    <img src="./report/test1.gif">
+    <img src="./report/test1.gif" loading="lazy" decoding="async">
 </div>
 <br>
 <div align="center">
   <span>
-    <img src="./report/test1/test1.1.jpg" width="200px" />
+    <img src="./report/test1/test1.1.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
   <span>
-    <img src="./report/test1/test1.2.jpg" width="200px" />
+    <img src="./report/test1/test1.2.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
   <span>
-    <img src="./report/test1/test1.3.jpg" width="200px" />
+    <img src="./report/test1/test1.3.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
 </div>
 <div align="center">
   <span>
-    <img src="./report/test1/test1.4.jpg" width="200px" />
+    <img src="./report/test1/test1.4.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
   <span>
-    <img src="./report/test1/test1.5.jpg" width="200px" />
+    <img src="./report/test1/test1.5.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
   <span>
-    <img src="./report/test1/test1.6.jpg" width="200px" />
+    <img src="./report/test1/test1.6.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
 </div>
 <br>
@@ -157,29 +157,29 @@ Cứ 50 epoches trong tổng số 5000 epoches, nhóm sẽ lấy ra 1 checkpoint
 - Kết quả Test với ảnh Test 2 ứng với các epoch 0 – 5000 (step: 50):
 
 <div align="center">
-    <img src="./report/test2.gif">
+    <img src="./report/test2.gif" loading="lazy" decoding="async">
 </div>
 <br>
 <div align="center">
   <span>
-    <img src="./report/test2/test2.1.jpg" width="200px" />
+    <img src="./report/test2/test2.1.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
   <span>
-    <img src="./report/test2/test2.2.jpg" width="200px" />
+    <img src="./report/test2/test2.2.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
   <span>
-    <img src="./report/test2/test2.3.jpg" width="200px" />
+    <img src="./report/test2/test2.3.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
 </div>
 <div align="center">
   <span>
-    <img src="./report/test2/test2.4.jpg" width="200px" />
+    <img src="./report/test2/test2.4.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
   <span>
-    <img src="./report/test2/test2.5.jpg" width="200px" />
+    <img src="./report/test2/test2.5.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
   <span>
-    <img src="./report/test2/test2.6.jpg" width="200px" />
+    <img src="./report/test2/test2.6.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
 </div>
 <br>
@@ -187,40 +187,40 @@ Cứ 50 epoches trong tổng số 5000 epoches, nhóm sẽ lấy ra 1 checkpoint
 - Kết quả Test với ảnh Test 3 ứng với các epoch 3000 – 4000 (step: 10):
 
 <div align="center">
-    <img src="./report/test3.gif">
+    <img src="./report/test3.gif" loading="lazy" decoding="async">
 </div>
 <br>
 <div align="center">
   <span>
-    <img src="./report/test3/test3.1.jpg" width="200px" />
+    <img src="./report/test3/test3.1.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
   <span>
-    <img src="./report/test3/test3.2.jpg" width="200px" />
+    <img src="./report/test3/test3.2.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
   <span>
-    <img src="./report/test3/test3.3.jpg" width="200px" />
-  </span>
-</div>
-<div align="center">
-  <span>
-    <img src="./report/test3/test3.4.jpg" width="200px" />
-  </span>
-  <span>
-    <img src="./report/test3/test3.5.jpg" width="200px" />
-  </span>
-  <span>
-    <img src="./report/test3/test3.6.jpg" width="200px" />
+    <img src="./report/test3/test3.3.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
 </div>
 <div align="center">
   <span>
-    <img src="./report/test3/test3.7.jpg" width="200px" />
+    <img src="./report/test3/test3.4.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
   <span>
-    <img src="./report/test3/test3.8.jpg" width="200px" />
+    <img src="./report/test3/test3.5.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
   <span>
-    <img src="./report/test3/test3.9.jpg" width="200px" />
+    <img src="./report/test3/test3.6.jpg" width="200px" loading="lazy" decoding="async"/>
+  </span>
+</div>
+<div align="center">
+  <span>
+    <img src="./report/test3/test3.7.jpg" width="200px" loading="lazy" decoding="async"/>
+  </span>
+  <span>
+    <img src="./report/test3/test3.8.jpg" width="200px" loading="lazy" decoding="async"/>
+  </span>
+  <span>
+    <img src="./report/test3/test3.9.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
 </div>
 <br>
@@ -228,40 +228,40 @@ Cứ 50 epoches trong tổng số 5000 epoches, nhóm sẽ lấy ra 1 checkpoint
 - Kết quả Test với ảnh Test 4 ứng với các epoch 3000 – 4000 (step: 10):
 
 <div align="center">
-    <img src="./report/test4.gif">
+    <img src="./report/test4.gif" loading="lazy" decoding="async" />
 </div>
 <br>
 <div align="center">
   <span>
-    <img src="./report/test4/test4.1.jpg" width="200px" />
+    <img src="./report/test4/test4.1.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
   <span>
-    <img src="./report/test4/test4.2.jpg" width="200px" />
+    <img src="./report/test4/test4.2.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
   <span>
-    <img src="./report/test4/test4.3.jpg" width="200px" />
-  </span>
-</div>
-<div align="center">
-  <span>
-    <img src="./report/test4/test4.4.jpg" width="200px" />
-  </span>
-  <span>
-    <img src="./report/test4/test4.5.jpg" width="200px" />
-  </span>
-  <span>
-    <img src="./report/test4/test4.6.jpg" width="200px" />
+    <img src="./report/test4/test4.3.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
 </div>
 <div align="center">
   <span>
-    <img src="./report/test4/test4.7.jpg" width="200px" />
+    <img src="./report/test4/test4.4.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
   <span>
-    <img src="./report/test4/test4.8.jpg" width="200px" />
+    <img src="./report/test4/test4.5.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
   <span>
-    <img src="./report/test4/test4.9.jpg" width="200px" />
+    <img src="./report/test4/test4.6.jpg" width="200px" loading="lazy" decoding="async"/>
+  </span>
+</div>
+<div align="center">
+  <span>
+    <img src="./report/test4/test4.7.jpg" width="200px" loading="lazy" decoding="async"/>
+  </span>
+  <span>
+    <img src="./report/test4/test4.8.jpg" width="200px" loading="lazy" decoding="async"/>
+  </span>
+  <span>
+    <img src="./report/test4/test4.9.jpg" width="200px" loading="lazy" decoding="async"/>
   </span>
 </div>
 <br>
